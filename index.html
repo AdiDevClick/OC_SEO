@@ -3,6 +3,7 @@
 
 <head>
 	<meta charset="UTF-8">
+	<meta name="language" content="fr-FR">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Nina Carducci - Photographe</title>
 	<meta name="description"
@@ -241,9 +242,10 @@
 	</main>
 
 	<footer>
-		<ul>
+		<!-- <h2>Me contacter</h2> -->
+		<ul itemprop=”address” itemscope itemtype=”http://schema.org/PostalAddress”>
 			<li>
-				<h2 itemprop=”name”>Adresse</h2>
+				<h3>Adresse</h3>
 			</li>
 			<li>
 				<span itemprop="streetAdress">68 avenue Alsace-Lorraine, </span><span itemprop="postalCode">33200
@@ -252,20 +254,21 @@
 		</ul>
 		<ul>
 			<li>
-				<h2> Téléphone</h2>
+				<h3> Téléphone</h3>
 			</li>
 			<li>
-				<p>05 56 67 78 89</p>
+				<p itemprop="telephone">05 56 67 78 89</p>
 			</li>
 		</ul>
 		<ul>
 			<li>
-				<h2> Horaires</h2>
+				<h3> Horaires</h3>
 			</li>
 			<li>
-				<p> Du lundi au vendredi de 10h à 19h</p>
+				<p itemprop="hoursAvailable"> Du lundi au vendredi de 10h à 19h</p>
 			</li>
 		</ul>
+
 	</footer>
 </body>
 
