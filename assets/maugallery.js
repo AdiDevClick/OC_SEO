@@ -78,7 +78,9 @@
     $.fn.mauGallery.methods = {
         createRowWrapper(element) {
             if (!element.children().first().hasClass("row")) {
-                element.append('<div class="gallery-items-row row"></div>');
+                element.append(
+                    '<div id="tabpanel-1" class="gallery-items-row row" role="tabpanel" aria-labelledby="tab-0"></div>'
+                );
             }
         },
         wrapItemInColumn(element, columns) {
@@ -231,12 +233,14 @@
         },
         showItemTags(gallery, position, tags) {
             var tagItems =
-                '<li class="nav-item"><span class="nav-link active active-tag"  data-images-toggle="all">Tous</span></li>';
+                '<li aria-selected="true" aria-controls="tabpanel-1" id="tab-0" class="nav-item" role="tab" tabindex="0"><span class="nav-link active active-tag"  data-images-toggle="all">Tous</span></li>';
             $.each(tags, function (index, value) {
-                tagItems += `<li class="nav-item">
+                tagItems += `<li id="tab-${
+                    index + 1
+                }" class="nav-item" aria-controls="tabpanel-1" aria-selected="false" role="tab" tabindex="0">
                 <span class="nav-link"  data-images-toggle="${value}">${value}</span></li>`;
             });
-            var tagsRow = `<ul class="my-4 tags-bar nav nav-pills">${tagItems}</ul>`;
+            var tagsRow = `<ul class="my-4 tags-bar nav nav-pills" role="tablist" aria-label="Gallery Tabs">${tagItems}</ul>`;
 
             if (position === "bottom") {
                 gallery.append(tagsRow);
@@ -250,9 +254,13 @@
             if ($(this).hasClass("active-tag")) {
                 return;
             }
-            $(".active-tag").removeAttr("aria-current");
+            $(".gallery-items-row").attr(
+                "aria-labelledby",
+                $(this)[0].parentElement.id
+            );
+            $(".active-tag").parent().attr("aria-selected", false);
             $(".active-tag").removeClass("active active-tag");
-            $(this).attr("aria-current", "true");
+            $(this).parent().attr("aria-selected", true);
             $(this).addClass("active active-tag");
 
             var tag = $(this).data("images-toggle");
