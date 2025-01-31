@@ -24,6 +24,11 @@ body {
 	font-size: 26px;
 }
 
+.carousel-control-next:hover,
+.carousel-control-prev:hover {
+	background-color: #1110104d;
+}
+
 .nav ul {
 	display: flex;
 	list-style-type: none;
