@@ -290,10 +290,16 @@ input[type="submit"] {
 footer {
 	/* background-color: #F6D2B8; */
 	display: grid;
-	grid-template-columns: 1fr 1fr 1fr;
+	grid-template-columns: 1fr 2fr;
 	place-items: center;
 	padding-inline: 100px;
 	padding-block: 100px;
+}
+
+footer div {
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	border-left: #000 1px solid;
 }
 
 footer li {
