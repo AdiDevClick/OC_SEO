@@ -29,6 +29,10 @@ body {
 	background-color: #1110104d;
 }
 
+.visually-hidden {
+	background-color: black;
+}
+
 .nav ul {
 	display: flex;
 	list-style-type: none;
@@ -118,7 +122,7 @@ body {
 .nav-pills .nav-link.active,
 .nav-pills .show>.nav-link {
 	color: #fff;
-	background-color: #BEB45A;
+	background-color: #000000;
 	border-radius: 0;
 }
 
