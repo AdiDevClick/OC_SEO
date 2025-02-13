@@ -294,7 +294,8 @@ footer {
 footer div {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    border-left: #000 1px solid
+    border-left: #000 1px solid;
+    justify-items: center;
 }
 
 footer li {
