@@ -115,6 +115,10 @@ body {
 	padding-block: 2em;
 }
 
+.gallery {
+	display: none;
+}
+
 .gallery .nav {
 	justify-content: center;
 }
