@@ -111,7 +111,7 @@ body {
 }
 
 .gallery {
-    display: none;
+    display: none
 }
 
 .gallery .nav {
@@ -299,7 +299,7 @@ footer div {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     border-left: #000 1px solid;
-    justify-items: center;
+    justify-items: center
 }
 
 footer li {
